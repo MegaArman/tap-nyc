@@ -9,6 +9,11 @@ output-formatter if a test fails as the output from nyc can already be bulky on 
 
 ## how to use with tapejs and nyc
     nyc tape tests/*.js | tap-nyc
-ex:
+    
+For example (from my own code):
 
+If all tests pass:
 ![](https://raw.githubusercontent.com/MegaArman/npm_images/master/tapnyc.png)
+
+If a test fails:
+![](https://raw.githubusercontent.com/MegaArman/npm_images/master/tapnycfailtest.png)

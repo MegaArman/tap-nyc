@@ -1,7 +1,7 @@
 {
-  "name": "tap-spec",
+  "name": "tap-nyc",
   "version": "4.1.1",
-  "description": "Formatted TAP output like Mocha's spec reporter",
+  "description": "nyc compatible TAP output formatter",
   "main": "index.js",
   "scripts": {
     "test": "echo 'Tests are out of date. Not running until fixed.'"
@@ -13,8 +13,6 @@
   "keywords": [
     "tape",
     "tap",
-    "mocha",
-    "spec",
     "reporter"
   ],
   "author": "Arman Bahrani",

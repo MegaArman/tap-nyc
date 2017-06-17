@@ -12,8 +12,5 @@ output-formatter if a test fails as the output from nyc can already be bulky on 
     
 For example (from my own code):
 
-If all tests pass:
 ![](https://raw.githubusercontent.com/MegaArman/npm_images/master/tapnyc.png)
 
-If a test fails:
-![](https://raw.githubusercontent.com/MegaArman/npm_images/master/tapnycfailtest.png)

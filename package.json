@@ -1,6 +1,6 @@
 {
   "name": "tap-nyc",
-  "version": "4.1.1",
+  "version": "1.0.0",
   "description": "nyc compatible TAP output formatter",
   "main": "index.js",
   "scripts": {

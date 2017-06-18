@@ -5,11 +5,8 @@ let format = require("chalk");
 let prettyMs = require("pretty-ms");
 let symbols = require("figures");
 
-module.exports = (spec) =>
+module.exports = () =>
 {
-  spec = spec || {};
-
-  let OUTPUT_PADDING = spec.padding || "  ";
   let output = through();
   let parser = tapOut();
   let stream = duplexer(parser, output);
@@ -151,7 +148,7 @@ module.exports = (spec) =>
 
   function pad (str) 
   {
-    return OUTPUT_PADDING + str;
+    return "  " + str;
   }
 
   return stream;

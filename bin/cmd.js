@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-let TapSpec = require("../");
-let tapSpec = TapSpec();
+let TapNyc = require("../");
+let tapNyc = TapNyc();
 
 process.stdin
-  .pipe(tapSpec)
+  .pipe(tapNyc)
   .pipe(process.stdout);
 
 process.on("exit", (status) =>
@@ -14,7 +14,7 @@ process.on("exit", (status) =>
     process.exit(1);
   }
   
-  if (tapSpec.failed) 
+  if (tapNyc.failed) 
   {
     process.exit(1);
   }

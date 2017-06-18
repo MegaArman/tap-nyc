@@ -5,7 +5,7 @@ let format = require("chalk");
 let prettyMs = require("pretty-ms");
 let symbols = require("figures");
 
-module.exports = function (spec) 
+module.exports = (spec) =>
 {
   spec = spec || {};
 
@@ -32,7 +32,7 @@ module.exports = function (spec)
   //});
 
   // Failing assertions
-  parser.on("fail", function (assertion) 
+  parser.on("fail", (assertion) =>
   {
     let glyph = symbols.cross;
     let title =  glyph + " " + assertion.name;
@@ -48,13 +48,13 @@ module.exports = function (spec)
     stream.failed = true;
   });
 
-  parser.on("comment", function (comment) 
+  parser.on("comment", (comment) =>
   {
     output.push(pad("  " + format.yellow(comment.raw)) + "\n");
   });
 
   // All done
-  parser.on("output", function (results) 
+  parser.on("output", (results) =>
   {
     output.push("\n\n");
 
@@ -85,7 +85,7 @@ module.exports = function (spec)
   // Utils-----------------------------
   function prettifyRawError (rawError) 
   {
-    return rawError.split("\n").map(function (line) 
+    return rawError.split("\n").map((line) =>
     {
       return pad(line);
     }).join("\n") + "\n\n";
@@ -124,12 +124,12 @@ module.exports = function (spec)
   function formatFailedAssertions (results) 
   {
     let out = "";
-    let groupedAssertions = results.fail.filter(function (assertion) 
+    let groupedAssertions = results.fail.filter((assertion) =>
     {
       return assertion.test;
     });
 
-    groupedAssertions.forEach(function (assertions, testNumber) 
+    groupedAssertions.forEach((assertions, testNumber) =>
     {
       // Wrie failed assertion"s test name
       let test = results
@@ -137,7 +137,7 @@ module.exports = function (spec)
       out += "\n" + pad("  " + test.name + "\n\n");
 
       // Write failed assertion
-      assertions.forEach(function (assertion) 
+      assertions.forEach((assertion) =>
       {
         out += pad("    " + format.red(symbols.cross) + " "
           + format.red(assertion.name)) + "\n";

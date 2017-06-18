@@ -53,7 +53,7 @@ module.exports = () =>
   // All done
   parser.on("output", (results) =>
   {
-    output.push("\n\n");
+    output.push("\n");
 
     // Most likely a failure upstream
     if (results.plans.length < 1) 
@@ -68,7 +68,7 @@ module.exports = () =>
     }
 
     output.push(formatTotals(results));
-    output.push("\n\n\n");
+    output.push("\n\n");
 
     // Exit if no tests run. This is a result of 1 of 2 things:
     //  1. No tests were written

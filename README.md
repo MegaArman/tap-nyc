@@ -12,10 +12,14 @@ To install as a developer dependency:
 
     npm install tap-nyc --save-dev
 
-## how to use with tapejs and nyc
-    nyc tape tests/*.js | tap-nyc
+## example usage with tapejs and nyc
+Put the following in your package.json:
+
+    "scripts": {
+      "test": "nyc tape tests/*.js | tap-nyc"
+    },
     
-For example (from my own code):
+Here's output I get for one of my projects when I run "npm t":
 
 ![](https://raw.githubusercontent.com/MegaArman/npm_images/master/tapnyc.png)
 

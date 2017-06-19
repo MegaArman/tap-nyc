@@ -7,6 +7,11 @@ TAP output. Unfortunately the existing TAP formatters I found never played well 
 as they either produced errors or produced incorrect looking output. Lastly, I only want to see output from my
 output-formatter if a test fails as the output from nyc can already be bulky on its own.
 
+## install
+To install as a developer dependency:
+
+    npm install tap-nyc --save-dev
+
 ## how to use with tapejs and nyc
     nyc tape tests/*.js | tap-nyc
     

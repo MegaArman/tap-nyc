@@ -4,13 +4,15 @@
   "description": "nyc compatible TAP output formatter",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'Tests are out of date. Not running until fixed.'"
+    "test": ""
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/MegaArman/tap-nyc.git"
   },
   "keywords": [
+    "coverage",
+    "nyc",
     "tape",
     "tap",
     "reporter"

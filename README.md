@@ -23,3 +23,6 @@ Here's output I get for one of my projects when I run "npm t":
 
 ![](https://raw.githubusercontent.com/MegaArman/npm_images/master/tapnyc.png)
 
+Here's what it looks like when a test fails:
+
+![](https://raw.githubusercontent.com/MegaArman/npm_images/master/tapnycfailure.png)

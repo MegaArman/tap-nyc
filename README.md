@@ -2,8 +2,8 @@
 nyc compatible TAP output formatter. 
 
 I made this package because I like the Tape testing framework which produces
-TAP output, but unfortunately the existing TAP formatters I found never played well with the nyc code coverage module 
-(https://www.npmjs.com/package/nyc)
+TAP output, but unfortunately the existing TAP formatters I found never played well with the
+[nyc](https://github.com/istanbuljs/nyc) code coverage package
 as they either produced errors or produced incorrect looking output. Further, I only want to see minimal output from my
 TAP formatter when all tests pass, as the output from nyc can already be bulky on its own.
 
